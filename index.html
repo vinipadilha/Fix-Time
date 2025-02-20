@@ -156,7 +156,7 @@
           Nosso compromisso é proporcionar conveniência e qualidade, conectando você às melhores oficinas da sua região, com um atendimento personalizado e serviços que atendem às suas necessidades. Acreditamos que cuidar do seu carro deve ser fácil, rápido e sem complicação. Por isso, criamos uma plataforma intuitiva, onde você pode agendar, acompanhar e manter seu veículo sempre em perfeito estado.
         </p>
 
-        <h1 class="mb-8 text-3xl font-extrabold tracking-tight leading-none text-gray-900 sm:text-md md:text-xl lg:text-xl ">
+        <h1 class="mb-8 text-xl font-extrabold tracking-tight leading-none text-gray-900 lg:text-2xl px-4">
           Seu carro merece o melhor cuidado, e nós estamos aqui para isso. 🚗🔧💨
         </h1>
 
@@ -174,10 +174,10 @@
 
     <!-- footer -->
     <div class="">
-      <div class="bg-white rounded-lg shadow-sm m-3 md:mx-40 sm:mx-20 lg:mx-60 ">
+      <div class="bg-white rounded-lg shadow-sm m-3 md:mx-40 mx-4 lg:mx-60 ">
           <div class="w-full max-w-screen-xl mx-auto p-2 lg:px-12 md:py-8">
               <div class="sm:flex sm:items-center sm:justify-between">
-                  <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                  <a href="index.html" class="flex items-center mb-4 lg:mb-0 space-x-3 rtl:space-x-reverse">
                       <img src="/img/fixtime-truck.png" class="h-12" alt="Flowbite Logo"/>
                   </a>
                   <ul class="flex flex-wrap items-center mb-6 text-md font-medium text-gray-500 sm:mb-0 ">
@@ -189,7 +189,7 @@
                       </li>
                   </ul>
               </div>
-              <hr class=" border-gray-200 sm:mx-auto lg:my-3" />
+              <hr class=" border-gray-400 sm:mx-auto my-2 lg:my-3" />
               <span class="block text-sm text-gray-500 sm:text-center">© 2025 <a href="index.html" class="hover:underline">FixTime</a>. Todos os direitos reservados.</span>
           </div>
         </div>
@@ -199,31 +199,23 @@
 
 
     <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const menuButton = document.getElementById("btn-menu-hamburguer")
-            const menuDropdown = document.getElementById("navbar-hamburger");
-          
-            menuButton.addEventListener("click", function () {
-              menuDropdown.classList.toggle("hidden");
-            });
-          });
-        
-        
-          document.getElementById("btnServicos").addEventListener("click", function(e) {
-        e.preventDefault(); // Impede o comportamento padrão do link
-          
-        // Rola suavemente para a seção com o id 'servicos'
-        document.getElementById("servicos").scrollIntoView({
-          behavior: "smooth", // Rolagem suave
-          block: "start"      // Alinha a seção no topo da tela
-        }); 
+      // menu hamburguer
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("btn-menu-hamburguer")
+        const menuDropdown = document.getElementById("navbar-hamburger");
+      
+        menuButton.addEventListener("click", function () {
+          menuDropdown.classList.toggle("hidden");
+        });
       });
 
 
-
-      
-     
-
+        
+        // rolagem simples
+      document.getElementById("btnServicos").onclick = function(e) {
+        e.preventDefault();
+        document.getElementById("servicos").scrollIntoView({ behavior: "smooth", block: "start" });
+      };
 
     </script>
     
