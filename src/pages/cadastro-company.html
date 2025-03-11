@@ -48,13 +48,13 @@
           </div>
 
           <div class="col-span-2">
-            <label for="CNPJ" class="block mb-1 text-sm font-medium text-gray-900 ">CNPJ (somente números)</label>
-            <input type="tel" id="CNPJ" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none focus:ring-2 block w-full p-2" placeholder="14796606000190"  required />
+            <label for="cnpj" class="block mb-1 text-sm font-medium text-gray-900 ">CNPJ</label>
+            <input type="tel" id="cnpj" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none focus:ring-2 block w-full p-2" placeholder="12.345.678/0001-95"  required />
           </div>
 
           <div class="col-span-2">
             <label for="telefone" class="block mb-1 text-sm font-medium text-gray-900 ">Número de telefone</label>
-            <input type="tel" id="telefone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none focus:ring-2 block w-full p-2" placeholder="41999887766"  required />
+            <input type="tel" id="telefone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none focus:ring-2 block w-full p-2" placeholder="(41) 99988-7766"  required />
           </div>
 
           <div class="col-span-3">
@@ -97,6 +97,13 @@
   </div>
 
 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+
+  <script>
+    $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
+    $('#telefone').mask('(00) 00000-0000');
+  </script>
     
 </body>
 </html>
