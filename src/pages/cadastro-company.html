@@ -54,7 +54,7 @@
 
           <div class="col-span-2">
             <label for="cep" class="block mb-1 text-sm font-medium text-gray-900 ">CEP</label>
-            <input type="tel" id="cep" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none focus:ring-2 block w-full p-2" placeholder="01001-000"  required />
+            <input type="tel" id="cep" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none focus:ring-2 block w-full p-2" placeholder="01001-000"  required onblur="consultarCep()" />
           </div>
 
           <div class="col-span-2">
@@ -114,6 +114,32 @@
     $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
     $('#telefone').mask('(00) 00000-0000');
     $('#cep').mask('00000-000');
+  </script>
+
+  <script>
+    function consultarCep() {
+    const cep = document.getElementById('cep').value.replace(/\D/g, '');
+  
+    if (cep.length === 8) {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(response => response.json())
+            .then(data => {
+                if (!data.erro) {
+                    document.getElementById('endereco').value = data.logradouro; // rua
+                    document.getElementById('bairro').value = data.bairro;
+                    document.getElementById('cidade').value = data.localidade;
+                    document.getElementById('estado').value = data.uf;
+                } else {
+                    alert('CEP não encontrado!');
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao consultar o CEP:', error);
+            });
+    } else {
+        alert('CEP inválido!');
+    }
+  }
   </script>
     
 </body>
