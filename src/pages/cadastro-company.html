@@ -125,11 +125,11 @@
     function consultarCep() {
     const cep = document.getElementById('cep').value.replace(/\D/g, ''); // remove tudo que nao for numero
   
-    if (cep.length === 8) {
+    if (cep.length === 8) { //confere se tem 8 numeros
         fetch(`https://viacep.com.br/ws/${cep}/json/`)
             .then(response => response.json())
             .then(data => {
-                if (!data.erro) {
+                if (!data.erro) { // substitui os endereços de acordo com oque aparece na api
                     document.getElementById('endereco').value = data.logradouro; // rua
                     document.getElementById('bairro').value = data.bairro;
                     document.getElementById('cidade').value = data.localidade;
