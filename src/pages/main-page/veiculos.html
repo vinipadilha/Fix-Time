@@ -80,32 +80,34 @@
         </div>
     </aside>
 
-    <div class=" lg:ml-64 p-4 lg:p-10">
+    <div class=" lg:ml-64 p-4 lg:p-14">
+
+        <!-- cadastrar veiculos --> 
         <div>
             <form>
-                <div class="grid gap-6 mb-6 md:grid-cols-2">
-                    <div>
-                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 ">Tipo de veículo</label>
-                        <select id="countries" class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none">
-                          <option value="carro">Carro</option>
-                          <option value="moto">Moto</option>
-                          <option value="caminhao">Caminhão</option>
-                          <option value="van">Van</option>
-                          <option value="onibus">Ônibus</option>
-                          <option value="quadriciclo">Quadriciclo</option>
+                <div class="grid gap-6 mb-6 md:grid-cols-6">
+                    <div class="col-span-1">
+                        <label for="tipo_veiculos" class="block mb-2 text-sm font-medium text-gray-900 ">Tipo de veículo</label>
+                        <select id="tipo_veiculos" class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none cursor-pointer">
+                          <option class="cursor-pointer" value="carro">Carro</option>
+                          <option class="cursor-pointer" value="moto">Moto</option>
+                          <option class="cursor-pointer" value="caminhao">Caminhão</option>
+                          <option class="cursor-pointer" value="van">Van</option>
+                          <option class="cursor-pointer" value="onibus">Ônibus</option>
+                          <option class="cursor-pointer" value="quadriciclo">Quadriciclo</option>
                         </select>
                     </div>
-                    <div>
-                        <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 ">Last name</label>
-                        <input type="text" id="last_name" class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Doe" required />
+                    <div class="col-span-2"   >
+                        <label for="marca" class="block mb-2 text-sm font-medium text-gray-900 ">Marca</label>
+                        <input type="text" id="marca" class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Ex: Honda" required />
                     </div>
-                    <div>
-                        <label for="company" class="block mb-2 text-sm font-medium text-gray-900 ">Company</label>
-                        <input type="text" id="company" class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Flowbite" required />
+                    <div class="col-span-2">
+                        <label for="modelo" class="block mb-2 text-sm font-medium text-gray-900 ">Civic</label>
+                        <input type="text" id="modelo" class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none" placeholder="Modelo" required />
                     </div>  
-                    <div>
-                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 ">Phone number</label>
-                        <input type="tel" id="phone" class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none " placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+                    <div class="col-span-1">
+                        <label for="ano" class="block mb-2 text-sm font-medium text-gray-900 ">Ano</label>
+                        <input type="number" id="ano" class="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none " placeholder="Ex: 2012" required />
                     </div>
                     <div>
                         <label for="website" class="block mb-2 text-sm font-medium text-gray-900 ">Website URL</label>
@@ -118,13 +120,19 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Submit</button>
+                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Registrar</button>
 
                 </div>
             </form>
             
         </div>
-        
+        <!-- cadastrar veiculos--> 
+
+        <!-- veiculos --> 
+        <div >
+
+        </div>
+        <!--veiculos --> 
     </div>
 
     <script>
