@@ -1,6 +1,11 @@
 
 # Fix-Time
 
+## 👤 Integrantes: 
+- Vinicius Padilha
+- Matheus Marcondes 
+- Germano Lagana
+
 ## 📖 Descrição
 ●	Fix Time é uma plataforma eficiente que facilita a gestão de horários para oficinas e torna mais simples para os clientes encontrarem prestadores de serviços. Com um sistema intuitivo e responsivo, otimiza o agendamento e melhora a experiência de ambas as partes.
 
