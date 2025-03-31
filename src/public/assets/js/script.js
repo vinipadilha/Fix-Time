@@ -64,3 +64,6 @@ hamburgerButton.addEventListener('click', () => {
 closeHamburgerButton.addEventListener('click', () => {
     sidebar.classList.add('-translate-x-full');
 });
+
+
+
