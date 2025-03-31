@@ -58,29 +58,9 @@
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+  
+  <script src="/src/public/assets/js/script.js"></script>
 
-  <script>
-    $('#cpf').mask('000.000.000-00', {reverse: true});
-    $('#telefone').mask('(00) 00000-0000');
-  </script>
-
-  <script> 
-
-    document.getElementById('confirma_senha').addEventListener('input', function() {
-    const senhaInput = document.getElementById('senha')
-    const confirmaSenhaInput = document.getElementById('confirma_senha')
-    const errorMessage = document.getElementById('error-message')
-    // Verifica se as senhas são iguais
-    if (senhaInput.value.trim() !== confirmaSenhaInput.value.trim()) {
-      confirmaSenhaInput.classList.add('bg-red-100', 'focus:border-red-500', 'focus:ring-red-500')
-      errorMessage.classList.remove('hidden')
-    } else {
-      confirmaSenhaInput.classList.remove('bg-red-100', 'focus:border-red-500', 'focus:ring-red-500' )
-      errorMessage.classList.add('hidden')
-    }
-  });
-
-  </script>
     
 </body>
 </html>

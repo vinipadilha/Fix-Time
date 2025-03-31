@@ -111,62 +111,12 @@
     </form>
   </div>
 
-
+  
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 
-  <script>
-    $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
-    $('#telefone').mask('(00) 00000-0000');
-    $('#cep').mask('00000-000');
-  </script>
+  <script src="/src/public/assets/js/script.js"></script>
 
-
-  <script>
-    function consultarCep() {
-    const cep = document.getElementById('cep').value.replace(/\D/g, ''); // remove tudo que nao for numero
-  
-    if (cep.length === 8) { //confere se tem 8 numeros
-        fetch(`https://viacep.com.br/ws/${cep}/json/`)
-            .then(response => response.json())
-            .then(data => {
-                if (!data.erro) { // substitui os endereços de acordo com oque aparece na api
-                    document.getElementById('endereco').value = data.logradouro; // rua
-                    document.getElementById('bairro').value = data.bairro;
-                    document.getElementById('cidade').value = data.localidade;
-                    document.getElementById('estado').value = data.uf;
-                } else {
-                    alert('CEP não encontrado!');
-                }
-            })
-            .catch(error => {
-                console.error('Erro ao consultar o CEP:', error);
-            });
-    } else {
-        alert('CEP inválido!');
-    }
-  }
-  </script>
-
-
-<script> 
-
-  document.getElementById('confirma_senha').addEventListener('input', function() {
-  const senhaInput = document.getElementById('senha')
-  const confirmaSenhaInput = document.getElementById('confirma_senha')
-  const errorMessage = document.getElementById('error-message')
-  // Verifica se as senhas são iguais
-  if (senhaInput.value.trim() !== confirmaSenhaInput.value.trim()) {
-    confirmaSenhaInput.classList.add('bg-red-100', 'focus:border-red-500', 'focus:ring-red-500')
-    errorMessage.classList.remove('hidden')
-  } else {
-    confirmaSenhaInput.classList.remove('bg-red-100', 'focus:border-red-500', 'focus:ring-red-500' )
-    errorMessage.classList.add('hidden')
-  }
-});
-
-
-</script>
 
 
     
