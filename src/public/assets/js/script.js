@@ -49,21 +49,3 @@ document.getElementById('confirma_senha').addEventListener('input', function() {
 });
 
 
-
-// Menu Hamburguer (Abre/Fecha)
-const hamburgerButton = document.getElementById('hamburgerButton');
-const closeHamburgerButton = document.getElementById('closeHamburgerButton');
-const sidebar = document.getElementById('sidebar');
-
-// Abre o menu
-hamburgerButton.addEventListener('click', () => {
-    sidebar.classList.toggle('-translate-x-full');
-});
-
-// Fecha o menu
-closeHamburgerButton.addEventListener('click', () => {
-    sidebar.classList.add('-translate-x-full');
-});
-
-
-
